@@ -1,6 +1,72 @@
 #:kivy 2.0.0
 
-AnchorLayoutExample:
+GridLayoutExample:
+
+<GridLayoutExample@GridLayout>:
+    #rows
+    #cols
+    #cols:2
+    rows:2
+    Button:
+        text: "A"
+        size_hint: None, 1
+        width: "60dp"
+    BoxLayout:
+        orientation: "horizontal"
+        Button:
+            text: "A"
+            size: "40dp", "100dp"
+            size_hint: None, None
+            # x, center_x, right // orientation: "vertical"
+            # y, center_y, top  // orientation: "horizontal"
+            #pos_hint: {"center_x":.5}
+        Button:
+            text: "B"
+            size_hint: .5, .5
+            #pos_hint: {"right":1}
+        Button:
+            text: "C"
+            size_hint: None, None
+            width: "50dp"
+            height: "100dp"
+            #pos_hint: {"right":.55}
+        Button:
+            text: "D"
+            size_hint: None, 1
+            width: "50dp"
+        Button:
+            text: "E"
+            size_hint: 1, None
+            height: "100dp"
+
+        BoxLayout:
+            orientation: "vertical"
+            spacing: "10dp"
+
+            Button:
+                text: "A1"
+            Button:
+                text: "B1"
+            Button:
+                text: "C1"
+            Button:
+                text: "D1"
+        
+        Label:
+            text: "Label"
+    
+
+    Button:
+        text: "C"
+    Button:
+        text: "D"
+        size_hint: None, 1
+        width: "60dp"
+    Button:
+        text: "E"
+    Button:
+        text: "F"
+
 <AnchorLayoutExample>:
     # right, left, center
     anchor_x: "center"
