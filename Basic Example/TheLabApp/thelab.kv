@@ -1,6 +1,12 @@
 #:kivy 2.0.0
 
-StackLayoutExample:
+ScrollViewExample:
+
+<ScrollViewExample@ScrollView>:
+    StackLayoutExample:
+        size_hint: 1, None
+        height: self.minimum_height
+
 
 <StackLayoutExample>:
     orientation: "lr-tb"
