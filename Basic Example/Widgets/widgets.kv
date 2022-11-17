@@ -1,0 +1,12 @@
+#:kivy 2.0.0
+WidgetExample
+<WidgetExample>:
+    cols: 3
+    Button:
+        text: "Click Here"
+        #on_press: root.on_press_event()
+        on_press: root.increment()
+    
+    Label:
+        #text: root.my_text
+        text: root.count
