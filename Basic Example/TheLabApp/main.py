@@ -4,6 +4,18 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.stacklayout import StackLayout
+from kivy.metrics import dp 
+
+class StackLayoutExample(StackLayout):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # Orientation's must be one of: ['lr-tb', 'tb-lr', 'rl-tb', 'tb-rl', 'lr-bt', 'bt-lr', 'rl-bt', 'bt-rl']
+        self.orientation = "lr-tb"
+        for i in range(10):
+            size = dp(100)
+            b = Button(text = str(i+1), size_hint = (None, None), size=(size, size))
+            self.add_widget(b)
 
 # class GridLayoutExample(GridLayout):
 #     pass
