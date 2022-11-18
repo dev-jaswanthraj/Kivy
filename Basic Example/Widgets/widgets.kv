@@ -2,11 +2,19 @@
 WidgetExample
 <WidgetExample>:
     cols: 3
+    ToggleButton:
+        text: "OFF"
+        on_state: root.toggle_on(self)
+        size_hint: None, 1
+        width: "100dp"
     Button:
-        text: "Click Here"
+        text: "Count"
         #on_press: root.on_press_event()
         on_press: root.increment()
-    
+        disabled: not root.state
     Label:
         #text: root.my_text
         text: root.count
+        font_name: r"C:\Users\HP\Desktop\Kivy Proj\Basic Example\Widgets\Fonts\LED.ttf"
+        font_size: "100dp"
+        color: 1, .5, 1, 1
