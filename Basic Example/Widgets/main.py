@@ -21,6 +21,9 @@ class WidgetExample(GridLayout):
         else:
             self.state = False
             toggle_button.text = "OFF"
+
+    def switch_on(self, switch_button):
+        print(switch_button.active)
     
 
 class Widgets(App):

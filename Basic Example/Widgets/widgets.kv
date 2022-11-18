@@ -18,3 +18,7 @@ WidgetExample
         font_name: r"C:\Users\HP\Desktop\Kivy Proj\Basic Example\Widgets\Fonts\LED.ttf"
         font_size: "100dp"
         color: 1, .5, 1, 1
+    Switch:
+        size_hint: None, 1
+        width: "100dp"
+        on_active: root.switch_on(self)
