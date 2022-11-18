@@ -6,6 +6,7 @@ class WidgetExample(GridLayout):
     my_text = StringProperty("Hello !")
     count = StringProperty('0')
     state = BooleanProperty(False)
+    #percentage = StringProperty("0")
     
     def on_press_event(self):
         self.my_text = "You Clicked!"
@@ -22,8 +23,11 @@ class WidgetExample(GridLayout):
             self.state = False
             toggle_button.text = "OFF"
 
-    def switch_on(self, switch_button):
-        print(switch_button.active)
+    # def switch_on(self, switch_button):
+    #     print(switch_button.active)
+    
+    # def slider_value(self, slider):
+    #     self.percentage = str(int(slider.value))
     
 
 class Widgets(App):

@@ -19,6 +19,19 @@ WidgetExample
         font_size: "100dp"
         color: 1, .5, 1, 1
     Switch:
+        id: my_switch
         size_hint: None, 1
         width: "100dp"
-        on_active: root.switch_on(self)
+        #on_active: root.switch_on(self)
+    Slider:
+        id: my_slider
+        min: 0
+        max: 100
+        value: 50
+        orientation: "vertical"
+        #on_value: root.slider_value(self)
+        disabled: not my_switch.active
+    Label:
+        text: str(int(my_slider.value))
+        font_size: "100dp"
+        color: .6, .8, 1, 1
