@@ -6,6 +6,7 @@ class WidgetExample(GridLayout):
     my_text = StringProperty("Hello !")
     count = StringProperty('0')
     state = BooleanProperty(False)
+    text_input_str = StringProperty("")
     #percentage = StringProperty("0")
     
     def on_press_event(self):
@@ -28,6 +29,9 @@ class WidgetExample(GridLayout):
     
     # def slider_value(self, slider):
     #     self.percentage = str(int(slider.value))
+
+    def on_text_validate(self, on_text_input):
+        self.text_input_str = on_text_input.text
     
 
 class Widgets(App):

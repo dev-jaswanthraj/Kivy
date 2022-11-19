@@ -41,3 +41,19 @@ WidgetExample
             # min always 0
             max: 100
             value: my_slider.value
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Enter your Name"
+            size_hint: None, None
+            width: "120dp"
+            height: "20dp"
+        TextInput:
+            id: my_text_input
+            size_hint: None, 1
+            width: "100dp"
+            text: ""
+            multiline: False
+            on_text_validate: root.on_text_validate(self)
+    Label:
+        text: root.text_input_str
