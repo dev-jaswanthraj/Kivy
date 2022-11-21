@@ -1,5 +1,6 @@
 from TheLabApp import main as l
 from Widgets import main as w
+from Widgets import imain as i
 
 
 if __name__ == "__main__":
@@ -10,6 +11,7 @@ if __name__ == "__main__":
     ++++++++++[ Select Application to Run ]+++++++++++
     --( 1. Layouts )--
     --( 2. Wigets  )--
+    --( 3. Image   )--
     """
     ))
 
@@ -18,3 +20,5 @@ if __name__ == "__main__":
             l.mainRun()
         case 2:
             w.mainRun()
+        case 3:
+            i.mainRun()
